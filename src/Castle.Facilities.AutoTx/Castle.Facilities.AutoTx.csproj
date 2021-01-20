@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
   <Import Project="..\..\buildscripts\common.props"></Import>
@@ -17,8 +17,8 @@
     <AssemblyName>Castle.Facilities.AutoTx</AssemblyName>
     <RootNamespace>Castle.Facilities.AutoTx</RootNamespace>
     <Version>4.1.0-intrigma</Version>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <FileVersion>4.0.0.0</FileVersion>
+    <AssemblyVersion>4.0.0</AssemblyVersion>
+    <FileVersion>4.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,7 +37,7 @@
     <ProjectReference Include="..\Castle.Services.Transaction\Castle.Services.Transaction.csproj" />
   </ItemGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)'=='net461'">
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
     <DefineConstants>$(DefineConstants)</DefineConstants>
   </PropertyGroup>
 

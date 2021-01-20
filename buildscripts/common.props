@@ -21,7 +21,7 @@
     <AssemblyVersion>$(BuildVersionMajor).0.0</AssemblyVersion>
     <AssemblyTitle>Castle.Transactions (Castle.Services.Transaction &amp; Castle.Facilities.AutoTx)</AssemblyTitle>
     <Authors>Castle Project Contributors</Authors>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</PackageLicenseUrl>
+    <PackageLicense>http://www.apache.org/licenses/LICENSE-2.0.html</PackageLicense>
     <PackageProjectUrl>https://github.com/mahara/Castle.Transactions</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageOutputPath>../../build/</PackageOutputPath>
@@ -33,7 +33,7 @@
     <ContentTargetFolders>.</ContentTargetFolders>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)'=='net461'">
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
     <DefineConstants>$(DefineConstants);FEATURE_PERFCOUNTERS;FEATURE_GAC;FEATURE_ISUPPORTINITIALIZE;FEATURE_REMOTING;FEATURE_SECURITY_PERMISSIONS;FEATURE_SYSTEM_CONFIGURATION;FEATURE_SERIALIZATION;FEATURE_URIMEMBERS;FEATURE_GETCALLINGASSEMBLY;FEATURE_APPDOMAIN;FEATURE_CODEDOM;FEATURE_ASSEMBLIES;CASTLE_SERVICES_LOGGING;FEATURE_EVENTLOG</DefineConstants>
   </PropertyGroup>
 

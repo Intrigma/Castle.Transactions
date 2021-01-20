@@ -17,7 +17,6 @@
 namespace Castle.Services.Transaction
 {
 	using System;
-	using System.Runtime.Remoting.Messaging;
 
 	public class CallContextActivityManager : MarshalByRefObject, IActivityManager
 	{
