@@ -25,10 +25,10 @@ namespace Castle.Services.Transaction
 	[Serializable]
 	public class RollbackResourceException : TransactionException
 	{
-		private readonly List<Pair<IResource, Exception>> failedResources = new List<Pair<IResource, Exception>>();
+		private readonly List<(IResource, Exception)> failedResources = new List<(IResource, Exception)>();
 
 		public RollbackResourceException(string message,
-			IEnumerable<Pair<IResource,Exception>> failedResources)
+			IEnumerable<(IResource, Exception)> failedResources)
 			: base(message, null)
 		{
 			this.failedResources.AddRange(failedResources);
@@ -40,12 +40,12 @@ namespace Castle.Services.Transaction
 		}
 
 		public RollbackResourceException(SerializationInfo info, StreamingContext context,
-			IEnumerable<Pair<IResource,Exception>> failedResources) : base(info, context)
+			IEnumerable<(IResource, Exception)> failedResources) : base(info, context)
 		{
 			this.failedResources.AddRange(failedResources);
 		}
 
-		public IList<Pair<IResource,Exception>> FailedResources
+		public IList<(IResource, Exception)> FailedResources
 		{
 			get { return failedResources; }
 		}

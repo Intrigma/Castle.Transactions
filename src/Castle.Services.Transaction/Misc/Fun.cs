@@ -123,11 +123,6 @@ namespace Castle.Services.Transaction
 				return new Error(false, e);
 			}
 		}
-
-		public static Pair<T,T2> And<T, T2>(this T first, T2 second)
-		{
-			return new Pair<T, T2>(first, second);
-		}
 	}
 
 	/// <summary>

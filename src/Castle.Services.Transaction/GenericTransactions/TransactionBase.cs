@@ -252,7 +252,7 @@ namespace Castle.Services.Transaction
 			Status = TransactionStatus.RolledBack;
 			_CanCommit = false;
 
-			var failures = new List<Pair<IResource, Exception>>();
+			var failures = new List<(IResource, Exception)>();
 
 			Exception toThrow = null;
 
@@ -266,7 +266,7 @@ namespace Castle.Services.Transaction
 			{
 				_Resources.ForEach(r =>
 				                  _Logger.TryLogFail(r.Rollback)
-				                  	.Exception(e => failures.Add(r.And(e))));
+				                  	.Exception(e => failures.Add((r, e))));
 
 				if (failures.Count == 0) return;
 
